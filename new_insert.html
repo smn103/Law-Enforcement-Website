@@ -1,0 +1,362 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<title>US Department of Justice</title>
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+ body, html {
+  height: 100%;}
+  .leftalign {
+  position: fixed;
+  top: 65%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  height: 750px;
+         width: 350px;
+  
+         overflow-x: hidden;
+         overflow-y: auto;
+}
+ .leftmid {
+  position: fixed;
+  top: 65%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  height: 750px;
+         width: 350px;
+  
+         overflow-x: hidden;
+         overflow-y: auto;
+}
+ .rightalign {
+  position: fixed;
+  height: 670px;
+  top: 60%;
+  left: 85%;
+   transform: translate(-50%, -50%);
+  
+         width: 350px;
+  
+         overflow-x: hidden;
+         overflow-y: auto;
+}
+ .centered {
+  position: fixed;
+  top: 65%;
+  left: 61%;
+  transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+  height: 750px;
+         width: 350px;
+  
+         overflow-x: hidden;
+         overflow-y: auto;
+}
+</style>
+</head>
+<body style="background-image: url('images.jpg'); background-repeat: no-repeat; background-size: cover;">
+<nav class="navbar navbar-light" style="background-color: #87d9e1;">
+  <a class="navbar-brand" href="#">
+    <img src="header-logo_bronze-resized-5-2.png" height="100" class="d-inline-block align-top" alt="">
+  </a>
+
+  <form class="form-inline" method="post" action="log_out.php">
+                  <div class="md-form my-0">
+                    <a href="../login.php" class="btn btn-outline-info" style="color:black;">Logout</a>
+                  </div>
+                </form>
+</nav>
+<!--<div class="container">		
+       <div class="jumbotron" style="background-color: #a4fae5; opacity: 0.7;">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="1200px-Seal_of_the_United_States_Drug_Enforcement_Administration.svg.png" height="100">
+            </div>
+            <div class="col-md-8 mb-4 white-text text-center">
+                    <h1><strong>Drug Enforcement Administration</strong></h1>
+            
+        </div>
+      </div>
+</div>
+
+</div>-->
+
+<div class="leftalign" >
+              <!-- Content -->
+           <div class="container">
+                <div class="jumbotron" style="opacity: 0.8">
+                <div class="row">
+                  <!--Grid column-->
+                  <div class="col-md-12 mb-4 white-text text-center">
+                    <h3><strong>Enter Criminal Details</strong></h3>
+                    
+                    
+              <form action="new_insert.php" method="post">
+    <label>Criminal ID :</label>
+    <input type="text" class="form-control" name="crid" id="crid" aria-describedby="crid" placeholder="Enter Criminal ID">
+    <br>
+          <label>Name</label>
+       <input type="text" class="form-control" name="cname" id="crid" aria-describedby="crid" placeholder="Enter Name"><br>
+      <label>Age</label>
+      <input type="text" class="form-control" name="age" id="crid" aria-describedby="crid" placeholder="Age"><br>
+      <label>No. of Crimes</label><br>
+      <input type="text" class="form-control" name="no_of_crimes" id="crid" aria-describedby="crid" placeholder="No. of Crimes"><br>
+<label>Latest Crime</label><br>
+<input type="text" class="form-control" id="crid" name="latest_crime" aria-describedby="crid" placeholder="Latest Crime"><br>
+<label>Jurisdiction</label><br>
+<input type="text" class="form-control" name="jurisdiction" id="crid" aria-describedby="crid" placeholder="Jurisdiction"><br>
+<label>Sentence</label><br>
+<input type="text" class="form-control" name="sentence" id="crid" aria-describedby="crid" placeholder="Sentence"><br>
+  <input type="submit" name="CriminalSubmit" value="Submit" class="btn btn-primary">
+</form>
+
+                  </div>
+                  <!--Grid column-->
+                </div>
+                <!--Grid row-->
+              </div>
+              <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+          </div>
+
+          <div class="leftmid" >
+              <!-- Content -->
+           <div class="container">
+                <div class="jumbotron" style="opacity: 0.8">
+                <div class="row">
+                  <!--Grid column-->
+                  <div class="col-md-12 mb-4 white-text text-center">
+                    <h3><strong>Enter Case Details</strong></h3>
+                    
+                    
+              <form action="new_insert.php" method="post">
+    <label>Case ID :</label>
+    <input type="text" class="form-control" name="caseid" id="crid" aria-describedby="crid" placeholder="Enter Case ID">
+    <br>
+          <label>Name</label>
+       <input type="text" class="form-control" name="name" id="crid" aria-describedby="crid" placeholder="Enter Name"><br>
+       <label>Department</label>
+      <select name="dept" class="form-control">
+    <option value="DEA">DEA</option>
+  <option value="PD">PD</option>
+    <option value="FBI">FBI</option>
+  </select><br>
+      <label>Drugs Associated</label>
+      <select name="drugs" class="form-control">
+    <option value="Cocaine">Cocaine</option>
+  <option value="Marijuana">Marijuana</option>
+    <option value="Ecstasy">Ecstasy</option>
+    <option value="Methamphetamine">Methamphetamine</option>
+  <option value="LSD">LSD</option>
+  </select><br>
+  <label>Type</label>
+   <input type="text" class="form-control" name="type" id="crid" aria-describedby="crid" placeholder="Type">
+     <br>
+      <label>Category</label>
+   <input type="text" class="form-control" name="category" id="crid" aria-describedby="crid" placeholder="Category">
+     <br>
+      <label>Rating</label>
+   <input type="text" class="form-control" name="rating" id="crid" aria-describedby="crid" placeholder="Rating">
+     <br>
+      <label>Criminal ID</label><br>
+      <input type="text" class="form-control" name="crid" id="crid" aria-describedby="crid" placeholder="Criminal ID"><br>
+<label>Badge ID</label><br>
+<input type="text" class="form-control" name="bid"id="crid" aria-describedby="crid" placeholder="Badge ID"><br>
+
+  <input type="submit" name="CaseSubmit" value="Submit" class="btn btn-primary">
+</form>
+
+                  </div>
+                  <!--Grid column-->
+                </div>
+                <!--Grid row-->
+              </div>
+              <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+          </div>
+
+  <div class="centered" >
+              <!-- Content -->
+           <div class="container">
+                <div class="jumbotron" style="opacity: 0.8">
+                <div class="row">
+                  <!--Grid column-->
+                  <div class="col-md-12 mb-4 white-text text-center">
+                    <h3><strong>Enter Location/Branch<br> Details</strong></h3>
+                    
+                    
+              <form action="new_insert.php" method="post">
+    <label>Branch Name :</label>
+    <input type="text" class="form-control" name="bname" id="crid" aria-describedby="crid" placeholder="Enter Branch Name">
+    <br>
+          <label>Cases Solved</label>
+       <input type="text" class="form-control" name="cases" id="crid" aria-describedby="crid" placeholder="Cases Solved"><br>
+      <label>No. of Officers</label>
+      <input type="text" class="form-control" name="of" id="crid" aria-describedby="crid" placeholder="No. of Officers"><br>
+  
+  <label>Office</label>
+      <select name="dept" class="form-control">
+    <option value="DEA">DEA</option>
+  <option value="PD">PD</option>
+    <option value="FBI">FBI</option>
+  </select><br>  <label>City</label>
+       <input type="text" class="form-control" name="city" id="crid" aria-describedby="crid" placeholder="City"><br>
+       <label>State</label>
+       <input type="text" class="form-control" name="state" id="crid" aria-describedby="crid" placeholder="State"><br>
+    <label>Pincode</label>
+       <input type="text" class="form-control" name="pin" id="crid" aria-describedby="crid" placeholder="Pincode"><br />
+  <input type="submit" name="LocationSubmit" value="Submit" class="btn btn-primary">
+</form>
+
+                  </div>
+                  <!--Grid column-->
+                </div>
+                <!--Grid row-->
+              </div>
+              <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+          </div>
+
+          <div class="rightalign" >
+              <!-- Content -->
+           <div class="container">
+                <div class="jumbotron" style="opacity: 0.8">
+                <div class="row">
+                  <!--Grid column-->
+                  <div class="col-md-12 mb-4 white-text text-center">
+                    <h3><strong>Enter Officer Details</strong></h3>
+                    
+                    
+              <form action="new_insert.php" method="post">
+    <label>Badge ID</label>
+       <input type="text" class="form-control" name="bid" id="crid" aria-describedby="crid" placeholder="Enter Badge ID"><br />
+    <label>Team ID</label>
+       <input type="text" class="form-control" name="tid" id="crid" aria-describedby="crid" placeholder="Enter Team ID"><br />     
+     <label>Name</label>
+       <input type="text" class="form-control" name="name" id="crid" aria-describedby="crid" placeholder="Name"><br /> 
+       <label>Age</label>
+       <input type="text" class="form-control" name="age" id="crid" aria-describedby="crid" placeholder="Age"><br /> 
+       <label>Criminals Arrested</label>
+       <input type="text" class="form-control" name="cr" id="crid" aria-describedby="crid" placeholder="Criminals Arrested"><br /> 
+       <label>Department</label>
+      <select name="dept" class="form-control">
+    <option value="DEA">DEA</option>
+  <option value="PD">PD</option>
+    <option value="FBI">FBI</option>
+  </select><br>
+  <label>Location</label>
+       <input type="text" class="form-control" name="loc" id="crid" aria-describedby="crid" placeholder="Location"><br /> 
+      <select name="position" class="form-control">
+    <option value="Administrative Support Specialist">Administrative Support Specialist</option>
+  <option value="Evidence Analyst">Evidence Analyst</option>
+    <option value="Administrative Officer">Administrative Officer</option>
+    <option value="New Agent">New Agent Trainee</option>
+    <option value="Special Agent">Special Agent</option>
+    <option value="Supervisory Special Agent">Supervisory Special Agent</option>
+    <option value="Senior Special Agent">Senior Special Agent</option>
+    <option value="ASAC">ASAC</option>
+    <option value="SAC">SAC</option>
+  <option value="Officer">Officer</option>
+  <option value="Sheriff">Sheriff</option>
+  <option value="Subordinate Officer">Subordinate Officer</option>
+  <option value="Sheriff's Deputy">Sheriff's Deputy</option>
+  <option value="Seargant">Seargant</option>
+  <option value="Inspector">Inspector</option>
+  </select>
+  </select><br>
+  <label>Cases Solved</label>
+       <input type="text" class="form-control" name="cases" id="crid" aria-describedby="crid" placeholder="Cases Solved"><br>
+    <label>Major Case</label>
+      <input type="text" class="form-control" name="major" id="crid" aria-describedby="crid" placeholder="Major Case"><br>
+  <input type="submit" name="OfficerSubmit" value="Submit" class="btn btn-primary">
+</form>
+
+                  </div>
+                  <!--Grid column-->
+                </div>
+                <!--Grid row-->
+              </div>
+              <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+          </div>
+
+                
+                
+  
+
+  
+
+
+
+
+	</div>
+
+</div>
+             
+</body>
+</html>
